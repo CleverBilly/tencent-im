@@ -498,6 +498,8 @@ func (a *api) GetGroups(groupIds []string, filters ...*Filter) (groups []*Group,
 			group.name = item.Name
 			group.groupType = item.Type
 			group.owner = item.OwnerUserId
+			group.introduction = item.Introduction
+			group.notification = item.Notification
 			group.avatar = item.FaceUrl
 			group.memberNum = item.MemberNum
 			group.maxMemberNum = item.MaxMemberNum
