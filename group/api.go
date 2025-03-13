@@ -507,7 +507,9 @@ func (a *api) GetGroups(groupIds []string, filters ...*Filter) (groups []*Group,
 			group.lastMsgTime = item.LastMsgTime
 			group.shutUpStatus = item.ShutUpAllMember
 			group.nextMsgSeq = item.NextMsgSeq
-
+			group.introduction = item.Introduction
+			group.notification = item.Notification
+			
 			if item.AppDefinedData != nil && len(item.AppDefinedData) > 0 {
 				for _, v := range item.AppDefinedData {
 					group.SetCustomData(v.Key, v.Value)

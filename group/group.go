@@ -338,10 +338,6 @@ func (g *Group) checkUpdateError() (err error) {
 
 // 检测群名称参数错误
 func (g *Group) checkNameArgError() error {
-	if g.name == "" {
-		return errNotSetGroupName
-	}
-
 	if len(g.name) > 30 {
 		return errGroupNameTooLong
 	}
