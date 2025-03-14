@@ -338,7 +338,7 @@ func (g *Group) checkUpdateError() (err error) {
 
 // 检测群名称参数错误
 func (g *Group) checkNameArgError() error {
-	if len(g.name) > 30 {
+	if len(g.name) > 100 {
 		return errGroupNameTooLong
 	}
 
@@ -362,7 +362,7 @@ func (g *Group) checkTypeArgError() error {
 
 // 检测群简介参数错误
 func (g *Group) checkIntroductionArgError() error {
-	if len(g.introduction) > 240 {
+	if len(g.introduction) > 400 {
 		return errGroupIntroductionTooLong
 	}
 
@@ -371,7 +371,7 @@ func (g *Group) checkIntroductionArgError() error {
 
 // 检测群公告参数错误
 func (g *Group) checkNotificationArgError() error {
-	if len(g.notification) > 300 {
+	if len(g.notification) > 400 {
 		return errGroupNotificationTooLong
 	}
 
